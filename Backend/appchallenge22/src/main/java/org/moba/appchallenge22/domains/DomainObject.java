@@ -1,7 +1,7 @@
 package org.moba.appchallenge22.domains;
 
 public interface DomainObject {
-    Long getId();
+    Integer getId();
 
-    void setId(Long id);
+    void setId(Integer id);
 }

@@ -1,32 +1,67 @@
 package org.moba.appchallenge22.domains;
 
-import com.sun.istack.NotNull;
-import org.aspectj.lang.annotation.RequiredTypes;
-
 import javax.persistence.*;
 
 @Entity
 public class User implements DomainObject{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     @Version
     private Integer version;
 
-    @NotNull
     private String firstName;
     private String lastName;
-    @NotNull
     private String email;
     private String phoneNumber;
 
     @Override
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
     @Override
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id=id;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
