@@ -1,7 +1,10 @@
 package org.moba.appchallenge22.domains;
 
-public interface DomainObject {
-    Integer getId();
+import java.io.Serial;
+import java.io.Serializable;
 
-    void setId(Integer id);
+public interface DomainObject<T extends Serializable> {
+    T getId();
+
+    void setId(T id);
 }
